@@ -397,11 +397,17 @@
 <li>Você receberá um convite para repositório. Todas as atividades serão disponibilizadas neste repositório e suas soluções devem ser adicionadas nos arquivos correspondentes. </li>
 <li>O corretor automático depende do pacote <code>grading-tools</code>, que deverá ser instalado como abaixo.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>$&gt; python3 -m pip install --user git+https://github.com/igordsm/grading-tools
+<div class="highlight"><pre><span></span><code>$&gt; python3.8 -m pip install --user git+https://github.com/igordsm/grading-tools
 </code></pre></div>
 
+<details class="tip"><summary>Python 3.8 no Ubuntu</summary><p>Se seu <code>python3</code> é uma versão inferior ao 3.8, você pode instalá-lo com os pacotes abaixo:</p>
+<div class="highlight"><pre><span></span><code>python3.8 python3.8-dev python3.8-pip
+</code></pre></div>
+
+<p>A partir daí poderá seguir normalmente as instruções desta página.</p>
+</details>
 <ol>
-<li>Com isso configurado, é só compilar seu programa e rodar <code>corretor.py executavel</code>. </li>
+<li>Com isso configurado, é só compilar seu programa e rodar <code>python3.8 corretor.py executavel</code>. </li>
 <li>Para baixar os novos exercícios é só rodar <code>git pull</code>. </li>
 <li>Os exercícios serão entregues criando um commit com sua resposta e dando <code>git push</code>. </li>
 </ol>
