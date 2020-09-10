@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/99-corretor-automatico/">
+        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/04-asm-1/">
       
       
         <meta name="author" content="Igor Montagner">
@@ -19,7 +19,7 @@
     
     
       
-        <title>99 - Corretor Automático - Sistemas Hardware-Software - 2020/2</title>
+        <title>04 - Registradores x64 e variáveis globais - Sistemas Hardware-Software - 2020/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#99-corretor-automatico" class="md-skip">
+        <a href="#04-registradores-x64-e-variaveis-globais" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              99 - Corretor Automático
+              04 - Registradores x64 e variáveis globais
             
           </span>
         </div>
@@ -353,18 +353,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../04-asm-1/" title="04 - Registradores x64 e variáveis globais" class="md-nav__link">
-      04 - Registradores x64 e variáveis globais
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -375,10 +363,62 @@
       
     
     
-    <a href="./" title="99 - Corretor Automático" class="md-nav__link md-nav__link--active">
-      99 - Corretor Automático
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        04 - Registradores x64 e variáveis globais
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="04 - Registradores x64 e variáveis globais" class="md-nav__link md-nav__link--active">
+      04 - Registradores x64 e variáveis globais
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parando-e-continuando-a-execucao-de-um-programa" class="md-nav__link">
+    Parando e continuando a execução de um programa.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enderecamento-relativo-e-variaveis-globais" class="md-nav__link">
+    Endereçamento relativo e variáveis globais
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-nav__link">
+      99 - Corretor Automático
+    </a>
   </li>
 
         
@@ -404,6 +444,30 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parando-e-continuando-a-execucao-de-um-programa" class="md-nav__link">
+    Parando e continuando a execução de um programa.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enderecamento-relativo-e-variaveis-globais" class="md-nav__link">
+    Endereçamento relativo e variáveis globais
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -414,7 +478,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/99-corretor-automatico.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/04-asm-1/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -422,34 +486,106 @@
                   
                 
                 
-                <h1 id="99-corretor-automatico">99 - Corretor Automático<a class="headerlink" href="#99-corretor-automatico" title="Permanent link">&para;</a></h1>
-<p>Algumas atividades de sala de aula entrarão na nota final. Elas estão marcadas como <strong>Entrega</strong> no início e serão entregues via um repositório especial no Github.</p>
+                <h1 id="04-registradores-x64-e-variaveis-globais">04 - Registradores x64 e variáveis globais<a class="headerlink" href="#04-registradores-x64-e-variaveis-globais" title="Permanent link">&para;</a></h1>
+<p>No handout passado usamos o <em>gdb</em> para listar variáveis globais, nomes de funções e examinar endereços de memória. Neste handout vamos começar a usar o <em>gdb</em> também para examinar nossos programas <em>durante sua execução</em>. </p>
+<h2 id="parando-e-continuando-a-execucao-de-um-programa">Parando e continuando a execução de um programa.<a class="headerlink" href="#parando-e-continuando-a-execucao-de-um-programa" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Compile <em>funcao1.c</em> usando as flags da disciplina (<code>-Og -g -Wall -std=c99</code>)</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Abra o arquivo com o <em>gdb</em> e liste suas funções e suas variáveis globais. <strong>Não rode o programa ainda!</strong> Anote abaixo seus endereços e nomes.  </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>O comando <code>disas</code> é usado para mostrar as instruções de máquina de uma função. Use-o para ver o código de máquina da função <code>funcao1</code>. Liste abaixo quais registradores foram usados nesta função e qual o tamanho dos dados guardados neles.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Com base nos tamanhos identificados, você consegue associar os registradores acima com as variáveis no código de <code>funcao1</code>? </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Use o comando <code>breakpoint funcao1</code> para parar a execução do programa quando a função <code>funcao1</code> começar a executar. Execute o programa usando <code>run</code>. O quê ocorre?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Podemos usar o comando <code>info registers edi</code> para ver o conteúdo atual do registrador <code>%edi</code>. Qual é este valor? Verifique quais argumentos são passados para <code>funcao1</code> no código <em>C</em> e, com estas informações em mãos, verifique sua resposta do exercício 3 e escreva abaixo suas novas conclusões.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>O comando <code>stepi</code> executa exatamente uma instrução de máquina. Use-o uma vez e execute novamente <code>disas funcao1</code>. O que aconteceu? É possível saber em qual instrução o programa está parado?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Cheque novamente o valor de <code>%edi</code>. Este valor condiz com a instrução executada? O que ela faz, exatamente?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Use <code>stepi</code> para parar logo antes do retorno da função. Verifique o conteúdo do registrador <code>%eax</code> e compare-o com os prints feitos pelo program. Você consegue dizer seu uso? \vspace{3em}</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Vamos agora analisar o registrador <code>%rsi</code>. Toda vez que um registrador aparece entre <code>( )</code> estamos fazendo um acesso a memória. Ao mostrar seu conteúdo usando <code>info registers rsi</code> recebemos o endereço de memória que contém o dado que queremos acessar. Use o comando <code>x</code> para mostrar, em decimal, o <code>int</code> que está armazenado neste endereço. \vspace{3em}</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Execute o comando <code>continue</code> para continuar rodando o programa. Ele irá rodar até que o próximo <em>breakpoint</em> seja alcançado ou até que o programa termine. </p>
+</div>
+<h2 id="enderecamento-relativo-e-variaveis-globais">Endereçamento relativo e variáveis globais<a class="headerlink" href="#enderecamento-relativo-e-variaveis-globais" title="Permanent link">&para;</a></h2>
+<p>Na parte anterior analisamos o código Assembly de nossa primeira função e vimos como </p>
+<ul>
+<li>mostrar o código fonte de uma função usando <code>disas</code></li>
+<li>mostrar o conteúdo de um registrador usando <code>info registers</code></li>
+<li>executar exatamente uma instrução usando <code>stepi</code></li>
+</ul>
+<p>Também vimos que ao colocar um registrador entre <code>( )</code> estamos fazendo um acesso a memória. Esta operação é equivalente a desreferenciar um ponteiro usando <code>*p</code>. Neste roteiro iremos adicionar um detalhe importante: podemos fazer contas com endereços usando esta notação. Nos exemplo abaixo nos referimos a memória como um grande vetor de bytes <code>unsigned char M[]</code>. Ou seja, ao acessar <code>M[%rax]</code>, por exemplo, estamos acessando o lugar na memória cujo endereço está escrito em <code>%rax</code>. </p>
 <ol>
-<li>Preencha a pesquisa de usuários do Github</li>
+<li><code>10(%rax)</code>: acessa a memória <code>M[%rax + 10]</code>.</li>
+<li><code>(%rax, %rdi, 4)</code>: acessa a memória <code>M[%rax + 4 * % rdi]</code>. Note que isto se parece com aritmética de ponteiros cujo tipo apontado seja inteiro, pois os endereços pulam de 4 em 4 bytes.</li>
 </ol>
-<iframe width="640px" height= "480px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=wKZwY5B7CUe9blnCjt6DOy1oY8Gb_ghOlbw3-aL0eF5UMTZONERZTEFPVEdQUERaSFdZQURQWEsyTCQlQCN0PWcu&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-
-<ol>
-<li>Você receberá um convite para repositório. Todas as atividades serão disponibilizadas neste repositório e suas soluções devem ser adicionadas nos arquivos correspondentes. </li>
-<li>O corretor automático depende do pacote <code>grading-tools</code>, que deverá ser instalado como abaixo.</li>
-</ol>
-<div class="highlight"><pre><span></span><code>$&gt; python3.8 -m pip install --user git+https://github.com/igordsm/grading-tools
-</code></pre></div>
-
-<details class="tip"><summary>Python 3.8 no Ubuntu</summary><p>Se seu <code>python3</code> é uma versão inferior ao 3.8, você pode instalá-lo com os pacotes abaixo:</p>
-<div class="highlight"><pre><span></span><code>python3.8 python3.8-dev 
-</code></pre></div>
-
-<p>A partir daí poderá seguir normalmente as instruções desta página.</p>
-</details>
-<ol>
-<li>Com isso configurado, é só compilar seu programa e rodar <code>python3.8 corretor.py executavel</code>. </li>
-<li>Para baixar os novos exercícios é só rodar <code>git pull</code>. </li>
-<li>Os exercícios serão entregues criando um commit com sua resposta e dando <code>git push</code>. </li>
-</ol>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Fique atento a atualizações no seu repositório de atividades. Todo novo exercício para entrega disponibilizado nos handouts devera aparecer no seu repositório também. Será avisado em aula se for necessário atualizar também o pacote acima.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Saia e abra o <em>gdb</em> novamente. Mostre o código de máquina da função <code>funcao2</code> e coloque um breakpoint em sua primeira instrução.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Execute agora o programa. A execução deve ter parado no início de <code>funcao2</code>. Rode <code>disas funcao2</code>.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Você consegue identificar acessos a memória em <code>funcao2</code>? Quais são de leitura e quais são de escrita? Qual o tamanho dos dados lidos/escritos? </p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Qual o significado do registrador <code>%rip</code>? Se não se lembrar reveja os slides. </p>
+</div>
+<p>O tipo de acesso a memória que estamos realizando se chama <code>rip relative addressing</code>. Este tipo de acesso é reservado para variáveis globais e dados somente leitura. Estes dados tem uma característica especial: eles são copiados para a memória seguindo o mesmo layout do arquivo executável. Ou seja, as posições <em>relativas</em> entre o código e os dados globais são fixas. </p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Anote abaixo o endeço das funções <code>MOV</code> que utilizam este acesso. Baseado nos exemplos acima, descubra o endereço das variáveis acessadas.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Confira se o valor identificado na questão anterior é o mesmo mostrado a direita das instruções <code>MOV</code> na saída do <code>disas</code>. O <em>gdb</em> já calcula este endereço para facilitar nossa vida, mas é interessante calcular isto manualmente uma vez para entender melhor o processo. </p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Use o comando <code>continue</code> para continuar o programa. Você deve estar agora na segunda execução de <code>funcao2</code>. Use o comando <code>x</code> para mostrar o valor armazenado na memória calculada acima. Lendo o código do programa, você consegue dizer qual variável é armazenada neste endereço? O valor atual é o esperado para a segunda execução de <code>funcao2</code>?</p>
+</div>
+<p>Além de poder mostrar valores na memória podemos <strong>escrever</strong> valores também. A sintaxe usada é a seguinte:</p>
+<blockquote>
+<p><code>set *( (tipo *) 0x.....) = valor</code></p>
+</blockquote>
+<p>onde devemos substituir <code>tipo</code> por um tipo básico de <em>C</em>, <code>0x...</code> pelo endereço desejado e <code>valor</code> pelo valor que queremos escrever. Note que o que estamos fazendo é um <em>cast</em> do endereço <code>0x....</code> para um ponteiro de <code>tipo</code> e depois estamos acessando o valor apontado usando <code>*</code>!</p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Escreva o valor <code>-10</code> na memória da variável global usada em <code>funcao2</code>. Rode o programa até o fim. O resultado foi o esperado? Escreva abaixo os comandos utilizados. \vspace{5em}</p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">Desafio</p>
+<p>Localize na função <code>main</code> as chamadas ao comando <code>printf</code>. Encontre então o endereço das strings de formatação e use o comando <code>x</code> para mostrá-las no gdb. Escreva os comandos usados abaixo. </p>
 </div>
                 
               
@@ -469,7 +605,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../04-asm-1/" title="04 - Registradores x64 e variáveis globais" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../03-ram/" title="03 - Representação de dados em RAM" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -478,11 +614,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                04 - Registradores x64 e variáveis globais
+                03 - Representação de dados em RAM
               </div>
             </div>
           </a>
         
+        
+          <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                99 - Corretor Automático
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
