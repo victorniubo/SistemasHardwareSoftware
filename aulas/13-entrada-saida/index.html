@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/10-malloc/">
+        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/13-entrada-saida/">
       
       
         <meta name="author" content="Igor Montagner">
@@ -19,7 +19,7 @@
     
     
       
-        <title>10 - Alocação Dinâmica de Memória - Sistemas Hardware-Software - 2020/2</title>
+        <title>13 - Entrada/Saída - Sistemas Hardware-Software - 2020/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-alocacao-dinamica-de-memoria" class="md-skip">
+        <a href="#13-entradasaida" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              10 - Alocação Dinâmica de Memória
+              13 - Entrada/Saída
             
           </span>
         </div>
@@ -425,67 +425,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        10 - Alocação Dinâmica de Memória
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="10 - Alocação Dinâmica de Memória" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../10-malloc/" title="10 - Alocação Dinâmica de Memória" class="md-nav__link">
       10 - Alocação Dinâmica de Memória
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercicios-basicos" class="md-nav__link">
-    Exercícios básicos
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ferramentas-de-verificacao-de-memoria" class="md-nav__link">
-    Ferramentas de verificação de memória
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementacoes-de-funcoes-entrega" class="md-nav__link">
-    Implementações de funções (Entrega)
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -517,11 +461,86 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../13-entrada-saida/" title="13 - Entrada/Saída" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        13 - Entrada/Saída
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="13 - Entrada/Saída" class="md-nav__link md-nav__link--active">
       13 - Entrada/Saída
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-arquivos" class="md-nav__link">
+    Trabalhando com arquivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra" class="md-nav__link">
+    Extra
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissoes-e-posse-de-arquivos" class="md-nav__link">
+    Permissões e posse de arquivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissões e posse de arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra_1" class="md-nav__link">
+    Extra
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -580,23 +599,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercicios-basicos" class="md-nav__link">
-    Exercícios básicos
+  <a href="#trabalhando-com-arquivos" class="md-nav__link">
+    Trabalhando com arquivos
   </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra" class="md-nav__link">
+    Extra
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ferramentas-de-verificacao-de-memoria" class="md-nav__link">
-    Ferramentas de verificação de memória
+  <a href="#permissoes-e-posse-de-arquivos" class="md-nav__link">
+    Permissões e posse de arquivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissões e posse de arquivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra_1" class="md-nav__link">
+    Extra
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#implementacoes-de-funcoes-entrega" class="md-nav__link">
-    Implementações de funções (Entrega)
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -612,7 +650,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/10-malloc/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/13-entrada-saida/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -620,88 +658,112 @@
                   
                 
                 
-                <h1 id="10-alocacao-dinamica-de-memoria">10 - Alocação Dinâmica de Memória<a class="headerlink" href="#10-alocacao-dinamica-de-memoria" title="Permanent link">&para;</a></h1>
-<h2 id="exercicios-basicos">Exercícios básicos<a class="headerlink" href="#exercicios-basicos" title="Permanent link">&para;</a></h2>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Abra o arquivo <em>ex1.c</em> em um editor e compile-o usando as flags da disciplina (<code>-Og -Wall -std=c99</code>).</p>
-</div>
-<p><strong>Sem rodar o programa</strong>, responda as questões abaixo.</p>
+                <h1 id="13-entradasaida">13 - Entrada/Saída<a class="headerlink" href="#13-entradasaida" title="Permanent link">&para;</a></h1>
+<h2 id="trabalhando-com-arquivos">Trabalhando com arquivos<a class="headerlink" href="#trabalhando-com-arquivos" title="Permanent link">&para;</a></h2>
+<p>Nesta seção trabalharemos com as chamadas <code>open</code>, <code>close</code>, <code>read</code> e <code>write</code>.</p>
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Analisando seu código-fonte, o que este programa faz?</p>
+<p>Leia o código do arquivo <code>exemplo_io1.c</code>. O quê ele faz?</p>
 </div>
+<p>Vamos agora usar o comando <code>man</code> para ver a documentação das chamadas de sistema do Linux. Digite no terminal <code>man read</code>. A tela mostrada contém a documentação da função <code>read</code>, incluindo sua assinatura e quais cabeçalhos devem ser incluídos para que ela possa ser usada.</p>
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Na execução deste programa, existe alguma possibilidade da alocação dinâmica com <code>malloc</code> falhar? Caso sim, indique as situações onde isto poderia acontecer.</p>
+<p>Usando como apoio a documentação aberta pelo comando <code>man</code>, como saber que um arquivo foi lido até o fim?</p>
+<p><strong>Dica</strong>: a seção <code>RETURN VALUE</code> pode te ajudar.</p>
 </div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>O seu programa libera toda memória que aloca? Se não, aponte onde ele deveria fazer isto.</p>
-</div>
-<hr />
-<p>Agora execute o programa acima e responda as questões abaixo.</p>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>Ocorreu algum problema durante a execução?</p>
-</div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>O comportamento de seu programa muda conforme N? Vá incrementando de um em um e veja o que acontece. Você consegue explicar por que? Discuta com seu grupo e valide sua resposta com o professor.</p>
-</div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>Existem três problemas no código. O primeiro (<code>vetor</code> não é desalocado) já indetificamos no exercíco anterior. Você consegue identificar os outros dois? Corrija-os e salve o programa em um arquivo <em>ex1-certo.c</em>.</p>
-</div>
-<h2 id="ferramentas-de-verificacao-de-memoria">Ferramentas de verificação de memória<a class="headerlink" href="#ferramentas-de-verificacao-de-memoria" title="Permanent link">&para;</a></h2>
-<p>Para poder identificar mais facilmente problemas relativos a memória, iremos utilizar uma ferramenta chamada Valgrind.</p>
-<p>O Valgrind é um detector de má gestão de memória. Ele roda seu programa em cima de um ambiente modificado e aponta os seguintes erros:</p>
-<ol>
-<li>memória alocada e não liberada</li>
-<li>acessos (leituras e escritas) a posições de memória não alocada ou inválidas</li>
-</ol>
-<p>O valgrind  está disponível na maioria das distribuições Linux modernas</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install valgrind
-</code></pre></div>
-
-<p>Para que os problemas encontrados pelo Valgrind sejam mais facilmente identificados, iremos passar a compilar utilizando a flag <code>-g</code>.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p>Compile os programas <code>ex1</code> e <code>ex1-certo</code> criados na parte anterior com a flag <code>-g</code>.</p>
-</div>
-<div class="admonition question medium">
-<p class="admonition-title">Question</p>
-<p>Rode o Valgrind com <code>valgrind --leak-check=yes ./ex1</code>. Quais foram os problemas encontrados e em quais linhas do código?</p>
-</div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>O quê significa o primeiro erro? Como corrigí-lo?</p>
-</div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>O quê significa o segundo erro? Como corrigí-lo?</p>
-</div>
-<div class="admonition question short">
-<p class="admonition-title">Question</p>
-<p>A seção <em>HEAP SUMMARY</em> faz um resumo dos dados alocados/desalocados no seu programa. Ela mostra algum problema? Se sim, qual linha de código é apontada? Qual é o problema diagnosticado por este aviso?</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Para acelerar suas buscas no <code>man</code> você pode ativar a busca pressinando <code>/</code>. Aí basta digitar o termo procurado. Para avançar para as próximas ocorrências de um termo basta apertar <code>/</code> + <code>Enter</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Verifique que seu programa corrigido <em>ex1-certo.c</em> roda sem erros no valgrind. Se não, corrija os problema e rode novamente até que rode sem erros.</p>
+<p>Baseado em sua resposta acima, modifique <code>exemplo_io1.c</code> para que ele mostre o arquivo inteiro. Para ficar melhor de visualizar o resultado, faça o <code>printf</code> interno mostrar somente o caractere lido.</p>
 </div>
-<h2 id="implementacoes-de-funcoes-entrega">Implementações de funções (<strong>Entrega</strong>)<a class="headerlink" href="#implementacoes-de-funcoes-entrega" title="Permanent link">&para;</a></h2>
-<p>Os exercícios abaixo estão disponíveis no repositório de entregas (pasta <code>08-malloc</code>).</p>
+<p>Vamos agora trabalhar com a chamada <code>write</code>. Um exemplo de seu uso está mostrado no arquivo <code>exemplo_io2.c</code>.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Abra o arquivo <code>exemplo_io2.c</code> e explique abaixo como usar <code>write</code>.</p>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Abra o arquivo <em>ex4.c</em> e implemente a função <em>mystrcpy</em>. Esta função recebe uma string, e devolve uma cópia da string original, alocando apenas o espaço realmente necessário.</p>
+<p>Crie um programa <code>copy_file</code> que lê dois nomes de arquivos usando <code>scanf</code> e copia o conteúdo do primeiro para o segundo. Ou seja, você deverá abrir ambos arquivos (cada um terá seu próprio <em>file descriptor</em>), ler do primeiro para um buffer e escrever este buffer no segundo.</p>
 </div>
+<h3 id="extra">Extra<a class="headerlink" href="#extra" title="Permanent link">&para;</a></h3>
+<p>Estes exercícios não terão correção durante a aula e devem ser checados no atendimento. Faça-os se você já acabou os anteriores e a correção/discussão ainda não começou.</p>
+<p>Até agora trabalhamos com um buffer com somente um caractere. Isso facilita a programação, mas deixa nosso código muito lento.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Abra o arquivo <em>ex5.c</em> e implemente a função <em>mystrcat</em>. Esta função recebe duas string, e devolve uma terceira que é a concatenação das duas primeiras, alocando apenas o espaço realmente necessário.</p>
+<p>Modifique o <code>copy_file</code> para usar um buffer de 100 caracteres. Meça o tempo de execução para a cópia de um arquivo grande (~100Mb) usando o comando <code>time</code>. Não se esqueça de verificar que os resultados ficaram iguais com o comando <code>diff</code>.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Não se esqueça de checar se sua implementação tem erros usando o valgrind.</p>
+<p>Não sabe como usar <code>time</code> ou <code>diff</code>? Use o comando <code>man</code> visto acima. Não sabe usar <code>man</code>? Use o comando <code>man</code> para aprender a usá-lo com <code>man man</code></p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Use o manual para entender o significado dos tempos mostrados pelo comando <code>time</code>. Escreva abaixo seu entendimento.</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Você consegue explicar a diferença de desempenho entre as duas versões?</p>
+</div>
+<h2 id="permissoes-e-posse-de-arquivos">Permissões e posse de arquivos<a class="headerlink" href="#permissoes-e-posse-de-arquivos" title="Permanent link">&para;</a></h2>
+<p>No <code>exemplo_io2.c</code> passamos algumas opções extras para poder criar o arquivo:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">fd1</span> <span class="o">=</span> <span class="n">open</span><span class="p">(</span><span class="n">arq1</span><span class="p">,</span> <span class="n">O_WRONLY</span> <span class="o">|</span> <span class="n">O_CREAT</span><span class="p">,</span> <span class="mo">0700</span><span class="p">);</span>
+</code></pre></div>
+
+<p>A flag <code>O_CREAT</code> é usada para indicar que o arquivo deve ser criado caso ele não exista. O número <code>0700</code> representa os bits de acesso visto na expositiva. Cada dígito contém 3 dígitos que representam as seguintes permissões</p>
+<ul>
+<li>4 - permissão de leitura</li>
+<li>2 - permissão de escrita</li>
+<li>1 - permissão de execução</li>
+</ul>
+<p>O primeiro dígito contém as permissões do usuário dono do arquivo. O segundo dígito contém as permissões do grupo dono do arquivo. Usuários que pertencem a este grupo possuem estas permissões. O terceiro dígito lista as permissões para todos os outros usuários.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Use <code>ls -l</code> na pasta do arquivo criado por <code>copy_file</code> (ou por <code>exemplo_io2</code>). Onde é possível obter as informações de permissões do arquivo? Qual o usuário e grupo donos do arquivo? As permissões passadas para o <code>open</code> foram corretamente colocadas no arquivo?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Quais permissões são garantidas pela máscara <code>640</code>? É uma boa ideia usá-la? \vspace{5em}</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Qual máscara usaria se quisesse que um arquivo possa ser modificado somente por seu dono, mas possa ser executado por qualquer usuário do sistema (incluindo o dono do arquivo)? Justifique.</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Rode o comando <code>copy_file</code> usando <code>sudo</code>. Use <code>ls -l</code> para listar as informações do arquivo. Escreva abaixo quem é seu dono e suas permissões de acesso.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Use os comandos <code>chown</code> para mudar o dono do arquivo para seu usuário e <code>chmod</code> para deixar suas permissões como leitura e escrita para você e somente leitura para o restante.</p>
+<p><strong>Dica</strong>: não sabe como usar os comandos acima? Use <code>man</code>.</p>
+</div>
+<h3 id="extra_1">Extra<a class="headerlink" href="#extra_1" title="Permanent link">&para;</a></h3>
+<p>Estes exercícios trabalham com o conceito de posse de arquivos e de sobrescrita de arquivos já existentes.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Tente usar <code>copy_file</code> usando como fonte algum arquivo que você não possui acesso de leitura (você pode criá-lo e depois usar <code>chmod</code> para editar os acessos). O quê ocorre? Você consegue explicar este comportamento?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Conserte o erro ocorrido acima checando a saída de <code>open</code>. Consulte o manual caso necessário. Não se esqueça de fazê-lo para o arquivo fonte e destino.</p>
+</div>
+<div class="admonition question medium">
+<p class="admonition-title">Question</p>
+<p>Vamos realizar um experimento neste exercício:</p>
+<ol>
+<li>Crie um arquivo com 100 caracteres <em>a</em> e chame-o de <code>100a</code>;</li>
+<li>Crie um arquivo com 3 caracteres <em>b</em> e chame-o de <code>3b</code>;</li>
+<li>Use <code>copy_file</code> para copiar <code>3b</code> em cima de <code>100a</code>;</li>
+<li>Mostre o conteúdo do arquivo sobrescrito <code>100a</code>.</li>
+</ol>
+<p>Você consegue explicar o que ocorreu? Se sim, busque no manual uma flag que, ao ser passada para o <code>open</code>, evita que isto ocorra.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>O <code>copy_file</code> sobrescreve arquivos sem dó. Use o manual para encontrar a flag que faz <code>open</code> falhar caso o arquivo de destino já exista e conserte seu programa para perguntar se o usuário deseja sobrescrever o arquivo. Note que isto conflita com seu exercício 6. Entenda como usar <code>errno</code> para que você consiga diferenciar os dois tipos de erros.</p>
 </div>
                 
               
@@ -721,7 +783,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../09-arrays/" title="09 - Array em Assembly" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../12-linux-do-zero/" title="12 - Linux do Zero" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -730,19 +792,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                09 - Array em Assembly
+                12 - Linux do Zero
               </div>
             </div>
           </a>
         
         
-          <a href="../11-tipos-de-dados/" title="11 - Tipos abstratos de dados" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                11 - Tipos abstratos de dados
+                99 - Corretor Automático
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
