@@ -537,6 +537,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../14-processos/" title="14 - Processos" class="md-nav__link">
+      14 - Processos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-nav__link">
       99 - Corretor Automático
     </a>
@@ -639,7 +651,6 @@
     <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
 <span class="p">}</span> <span class="n">Point2D</span><span class="p">;</span>
 </code></pre></div>
-
 <p>Vamos listar algumas operações que podem ser feitas com um ponto:</p>
 <ol>
 <li>Inicialização e finalização - todo ponto deve ser inicializado com algum valor para x e y.</li>
@@ -667,7 +678,6 @@
 
 <span class="cp">#endif</span>
 </code></pre></div>
-
 <h3 id="ponteiros-opacos">Ponteiros opacos<a class="headerlink" href="#ponteiros-opacos" title="Permanent link">&para;</a></h3>
 <p>Note que no exemplo acima a definição do <code>struct</code> <code>Point2D</code> não está inclusa no arquivo <code>point2d.h</code>! Por conta de ponteiro se um tipo de dado em <em>C</em>, podemos declarar ponteiros para <code>Point2D</code> e passá-los para as funções de nosso <em>TAD</em> <em>mesmo sem saber a definição exata de onde eles apontam!</em>. Só não podemos tentar acessar <em>a variável apontada</em> por este ponteiros (usando <code>*</code> ou <code>-&gt;</code>). Por isso, <strong>alocação dinâmica de memória</strong> é essencial em <em>TAD*s: ela permite que todos os detalhes da implementação interna estejam **encapsulados*</em> e que só possamos interagir com o tipo via as funções definidas para isso.</p>
 <div class="admonition example">
@@ -715,7 +725,6 @@
 
 <span class="cp">#endif</span>
 </code></pre></div>
-
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><strong>Entrega</strong>: implemente a estrutura <em>vetor dinâmico</em> no arquivo <em>vec_int.c</em> e compile o programa de testes da mesma maneira que foi feito na parte anterior. Para sua entrega estar 100% seu programa de testes deverá rodar sem erros no <em>valgrind</em>.</p>

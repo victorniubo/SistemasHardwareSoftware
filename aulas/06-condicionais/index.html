@@ -592,6 +592,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../14-processos/" title="14 - Processos" class="md-nav__link">
+      14 - Processos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-nav__link">
       99 - Corretor Automático
     </a>
@@ -752,14 +764,12 @@
     <span class="k">return</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <div class="highlight"><pre><span></span><code><span class="err">0000000000000000</span> <span class="err">&lt;</span><span class="nf">igual</span><span class="err">&gt;</span><span class="p">:</span>
 <span class="err">0:</span>   <span class="err">39</span> <span class="nf">f7</span>                   <span class="no">cmp</span>    <span class="nv">%esi</span><span class="p">,</span><span class="nv">%edi</span>
 <span class="err">2:</span>   <span class="err">0</span><span class="nf">f</span> <span class="mi">94</span> <span class="no">c0</span>                <span class="no">sete</span>   <span class="nv">%al</span>
 <span class="err">5:</span>   <span class="err">0</span><span class="nf">f</span> <span class="no">b6</span> <span class="no">c0</span>                <span class="no">movzbl</span> <span class="nv">%al</span><span class="p">,</span><span class="nv">%eax</span>
 <span class="err">8:</span>   <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <p>A comparação <code>a == b</code> é feita primeiro executando <code>cmp</code> entre os argumentos <code>%edi</code> e <code>%esi</code> e depois usando <code>sete</code> (<em>set equal</em>) para atribuir 1 <code>%al</code> se <code>%edi == %esi</code> e 0 caso contrário.</p>
 <p>Por fim, temos a instrução <code>movzbl</code>, que faz o cast de <code>char</code> (<code>%al</code>) para <code>int</code> (<code>%eax</code>). Lembre-se que as instruções <code>set*</code> só modificam os primeiros 8 bits de <code>%eax</code>. O restante continua com o valor antigo. Usamos <code>movzbl</code> para extender o número em <code>%al</code> para ocupar todo <code>%eax</code>.</p>
 <div class="admonition tip">
@@ -782,7 +792,6 @@
 <span class="err">6:</span>   <span class="err">0</span><span class="nf">f</span> <span class="no">b6</span> <span class="no">c0</span>                <span class="no">movzbl</span> <span class="nv">%al</span><span class="p">,</span><span class="nv">%eax</span>
 <span class="err">9:</span>   <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Qual é o tamanho do argumento de <code>ex1</code>? Ele é <code>signed</code> ou <code>unsigned</code>?</p>
@@ -799,7 +808,6 @@
    <span class="err">6:</span>   <span class="err">0</span><span class="nf">f</span> <span class="no">b6</span> <span class="no">c0</span>                <span class="no">movzbl</span> <span class="nv">%al</span><span class="p">,</span><span class="nv">%eax</span>
    <span class="err">9:</span>   <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Qual é o tamanho dos argumentos de <code>ex2</code>? Ele é <code>signed</code> ou <code>unsigned</code>?</p>
@@ -819,7 +827,6 @@
    <span class="nl">e:</span>   <span class="err">0</span><span class="nf">f</span> <span class="no">b6</span> <span class="no">c0</span>                <span class="no">movzbl</span> <span class="nv">%al</span><span class="p">,</span><span class="nv">%eax</span>
   <span class="err">11:</span>   <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Qual é o tamanho dos argumentos de <code>ex3</code>? Ele é <code>signed</code> ou <code>unsigned</code>?</p>
@@ -834,7 +841,6 @@
     <span class="k">goto</span> <span class="n">label</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>A tabela abaixo mostra as operações de saltos condicionais.</p>
 <p><img alt="Tabela de set para saltos condicionais" src="tabela-jmp.png" />{width=400px}</p>
 <h3 id="exemplo-guiado">Exemplo guiado<a class="headerlink" href="#exemplo-guiado" title="Permanent link">&para;</a></h3>
@@ -847,7 +853,6 @@
 <span class="nl">c</span><span class="p">:</span>   <span class="n">b8</span> <span class="mo">01</span> <span class="mo">00</span> <span class="mo">00</span> <span class="mo">00</span>          <span class="n">mov</span>    <span class="err">$</span><span class="mh">0x1</span><span class="p">,</span><span class="o">%</span><span class="n">eax</span>
 <span class="mi">11</span><span class="o">:</span>  <span class="n">c3</span>                      <span class="n">retq</span>
 </code></pre></div>
-
 <p>Pares de instruções <code>test-j*</code> ou <code>cmp-j*</code> são comumente usadas para representar a construção <code>if-goto</code>.</p>
 <ul>
 <li>O nome da função dá uma dica de seu valor de retorno. Você consegue entender o porquê <code>test $1, %dil</code> faz isto? \vspace{5em}</li>
@@ -862,7 +867,6 @@
     <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Tiramos então o <code>goto</code> e levando em conta sua resposta no item anterior, ficamos com o seguinte código. Note que precisamos negar a comparação feita no código anterior!</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">eh_par</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
@@ -871,7 +875,6 @@
     <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Podemos observar duas coisas no código assembly gerado:</p>
 <ol>
 <li>O código que estava dentro do <code>if</code> foi colocado após o código que estava fora do if! O compilador pode mudar a ordem dos nossos blocos de código se for conveniente (para ele, não para nós).</li>
@@ -889,7 +892,6 @@
 <span class="nl">f:</span>   <span class="nf">b8</span> <span class="mi">01</span> <span class="mi">00</span> <span class="mi">00</span> <span class="mi">00</span>          <span class="no">mov</span>    <span class="no">$0x1</span><span class="p">,</span><span class="nv">%eax</span>
 <span class="err">14:</span>  <span class="nf">eb</span> <span class="no">f4</span>                   <span class="no">jmp</span>    <span class="mh">a</span> <span class="p">&lt;</span><span class="no">fun4</span><span class="p">+</span><span class="mi">0xa</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Qual expressão booleana é testada? </p>
@@ -916,7 +918,6 @@
 <span class="err">15:</span>  <span class="err">48</span> <span class="err">8</span><span class="nf">d</span> <span class="mi">47</span> <span class="mi">05</span>             <span class="no">lea</span>    <span class="mi">0x5</span><span class="p">(</span><span class="nv">%rdi</span><span class="p">),</span><span class="nv">%rax</span>
 <span class="err">19:</span>  <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
 <p>Qual são as expressões booleanas testadas? (Dica: são 3, assim como no exercício 3).</p>
@@ -941,7 +942,6 @@
     <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Seu assembly correspondente, quando compilado com <code>gcc -Og -c</code> é</p>
 <div class="highlight"><pre><span></span><code><span class="err">0000000000000000</span> <span class="err">&lt;</span><span class="nf">exemplo2</span><span class="err">&gt;</span><span class="p">:</span>
 <span class="err">0:</span>   <span class="err">48</span> <span class="err">83</span> <span class="nf">ff</span> <span class="mi">04</span>             <span class="no">cmp</span>    <span class="no">$0x4</span><span class="p">,</span><span class="nv">%rdi</span>
@@ -956,7 +956,6 @@
 <span class="err">18:</span>  <span class="err">48</span> <span class="err">8</span><span class="nf">d</span> <span class="mi">04</span> <span class="mi">37</span>             <span class="no">lea</span>    <span class="p">(</span><span class="nv">%rdi</span><span class="p">,</span><span class="nv">%rsi</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="nv">%rax</span>
 <span class="err">1</span><span class="nl">c:</span>  <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <p>Primeiramente, notamos que a função recebe dois argumentos (pois só utiliza <code>%rdi</code> e <code>%rsi</code>) e que ambos são tratados como <code>long</code>. Vamos então às expressões booleanas. Existem três expressões boolenas:</p>
 <ol>
 <li><code>cmp</code>-<code>setg</code>(linhas <code>0-4</code>) compara <code>%rdi</code> com <code>4</code> e seta <code>%dl=1</code> se <code>%rdi&gt;4</code> (**g**reater)</li>
@@ -981,7 +980,6 @@
     <span class="k">return</span> <span class="n">retval</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>\pagebreak</p>
 <p>Podemos então melhorar tornar este código mais legível, resultando no seguinte:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">exemplo2</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">,</span> <span class="kt">long</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
@@ -992,7 +990,6 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-
 <p>Duas coisas importantes podem ser vistas neste código</p>
 <ol>
 <li>As comparações não são exatamente iguais (<code>a&gt;4</code> e <code>a&gt;=5</code>), mas são equivalentes.</li>
@@ -1010,7 +1007,6 @@
 <span class="err">10:</span>  <span class="err">89</span> <span class="nf">f0</span>                   <span class="no">mov</span>    <span class="nv">%esi</span><span class="p">,</span><span class="nv">%eax</span>
 <span class="err">12:</span>  <span class="nf">c3</span>                      <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Traduza o código acima para <strong>gotoC</strong>.</p>

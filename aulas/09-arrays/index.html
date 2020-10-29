@@ -545,6 +545,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../14-processos/" title="14 - Processos" class="md-nav__link">
+      14 - Processos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-nav__link">
       99 - Corretor Automático
     </a>
@@ -666,7 +678,6 @@
 <p>Dado o array <code>int *vec</code> (guardado em <code>%rdx</code>). A atribuição de 5 ao elemento <code>i</code> (guardado em <code>%ecx</code>) seria traduzida como</p>
 <div class="highlight"><pre><span></span><code><span class="nf">MOVL</span> <span class="no">$0x5</span><span class="p">,</span> <span class="p">(</span><span class="nv">%rdx</span><span class="p">,</span> <span class="nv">%rcx</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
-
 <div class="admonition warning">
 <p class="admonition-title">Importante</p>
 <p>Lembre-se de que apontadores são tipos de dados com tamanho <em>8 bytes</em>.</p>
@@ -694,7 +705,6 @@
   <span class="err">17:</span>   <span class="err">7</span><span class="nf">c</span> <span class="no">f3</span>                   <span class="no">jl</span>     <span class="mh">c</span> <span class="p">&lt;</span><span class="no">soma</span><span class="p">+</span><span class="mi">0xc</span><span class="p">&gt;</span>
   <span class="err">19:</span>   <span class="nf">f3</span> <span class="no">c3</span>                   <span class="no">repz</span> <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
 <p>A função acima usa vários registradores. Para facilitar a descoberta de quais são parâmetros da função anote abaixo cada registrador usado e, ao lado, a linha do primeiro uso e se esse uso foi leitura ou escrita.</p>
@@ -731,7 +741,6 @@
 b:   0f b6 c0                movzbl %al,%eax
 e:   c3                      retq
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Temos acessos à memória relativos ao endereço passado em <code>%rdi</code> nas linhas <code>0, 3</code> e <code>5</code>. Isto significa que <code>%rdi</code> é um ponteiro. Pelos tipos de acessos feitos, você consegue identificar para qual tipo de variável ele aponta?</p>
@@ -757,7 +766,6 @@ e:   c3                      retq
   <span class="err">15:</span>   <span class="nf">eb</span> <span class="no">ee</span>                   <span class="no">jmp</span>    <span class="mh">5</span> <span class="p">&lt;</span><span class="no">first_neg</span><span class="p">+</span><span class="mi">0x5</span><span class="p">&gt;</span>
   <span class="err">17:</span>   <span class="nf">f3</span> <span class="no">c3</span>                   <span class="no">repz</span> <span class="no">retq</span>
 </code></pre></div>
-
 <div class="admonition question medium">
 <p class="admonition-title">Question</p>
 <p>A função acima usa vários registradores. Para facilitar a descoberta de quais são parâmetros da função anote abaixo cada registrador usado e, ao lado, a linha do primeiro uso e se esse uso foi leitura ou escrita.</p>

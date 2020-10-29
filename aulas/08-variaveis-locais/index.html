@@ -545,6 +545,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../14-processos/" title="14 - Processos" class="md-nav__link">
+      14 - Processos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-nav__link">
       99 - Corretor Automático
     </a>
@@ -661,7 +673,6 @@ addl    0xc(%rsp),%edx
 add $0x10, %rsp
 ret
 </code></pre></div>
-
 <p>No exemplo acima, temos duas variáveis locais: <code>0x8(%rsp)</code> e <code>0xc(rsp)</code>. Cada uma é identificada no código Assembly pelo endereço em que está posicionada na pilha. Logo, <strong>todo deslocamento em relação a <code>%rsp</code> indica um acesso a variável local</strong>, sendo que pode ser um acesso de leitura e escrita (usando <code>MOV</code>, por exemplo) ou da operação <em>endereço de</em> <code>&amp;</code> (usando <code>LEA</code>).</p>
 <p>Conseguimos identificar que seus tamanhos são <code>int</code> por duas razões:</p>
 <ol>
@@ -693,7 +704,6 @@ ret
 <p>É possível que o <code>lea</code> abaixo seja aritmético? Por que?</p>
 <div class="highlight"><pre><span></span><code><span class="nf">lea</span>    <span class="mi">0x8</span><span class="p">(</span><span class="nv">%rsp</span><span class="p">),</span><span class="nv">%rdx</span>
 </code></pre></div>
-
 </div>
 <h2 id="arquivo-ex2">Arquivo <code>ex2</code><a class="headerlink" href="#arquivo-ex2" title="Permanent link">&para;</a></h2>
 <p>O código abaixo (<em>ex2</em>) utiliza variáveis locais.</p>
@@ -709,7 +719,6 @@ ret
    <span class="err">0</span><span class="nf">x062b</span> <span class="err">&lt;+</span><span class="mi">45</span><span class="err">&gt;</span><span class="p">:</span>       <span class="no">add</span>    <span class="no">$0x10</span><span class="p">,</span><span class="nv">%rsp</span>
    <span class="err">0</span><span class="nf">x062f</span> <span class="err">&lt;+</span><span class="mi">49</span><span class="err">&gt;</span><span class="p">:</span>       <span class="no">retq</span>   
 </code></pre></div>
-
 <p>Vamos começar analisando as três primeiras linhas do programa. </p>
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
@@ -750,7 +759,6 @@ ret
    <span class="err">0</span><span class="nf">x1187</span> <span class="err">&lt;+</span><span class="mi">62</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">callq</span>  <span class="mh">0x1030</span> <span class="p">&lt;</span><span class="no">puts@plt</span><span class="p">&gt;</span>
    <span class="err">0</span><span class="nf">x118c</span> <span class="err">&lt;+</span><span class="mi">67</span><span class="err">&gt;</span><span class="p">:</span>    <span class="no">jmp</span>    <span class="mh">0x1176</span> <span class="p">&lt;</span><span class="no">main</span><span class="p">+</span><span class="mi">45</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
 <p>Vamos começar procurando por variáveis locais que estejam na pilha. Quanto espaço é reservado para elas? Liste abaixo as que você encontrou e dê um nome para cada uma. </p>
