@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <signal.h>
 
 int status = 0;
 
@@ -23,9 +24,18 @@ void sigterm_handler(int num) {
 }
 
 int main() {
-    /* TODO: registar SIGINT aqui. */
+    struct sigaction sint;
+    sint.sa_handler = sigint_handler;
+    sint.sa_flags = 0;
+    sigemptyset(&sint.sa_mask);
+    sigaction(SIGINT, &sint, NULL);
 
-    /* TODO: registar SIGTERM aqui. */
+    struct sigaction sterm;
+    sterm.sa_handler = sigterm_handler;
+    sterm.sa_flags = 0;
+    sigemptyset(&sterm.sa_mask);
+    sigaction(SIGTERM, &sterm, NULL);
+
 
     printf("Meu pid: %d\n", getpid());
 
