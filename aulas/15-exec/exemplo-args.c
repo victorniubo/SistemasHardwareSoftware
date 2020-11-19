@@ -1,13 +1,10 @@
 #include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    double soma = 0;
-    for (int i = 1; i < argc; i++) {
-        soma += atof(argv[i]);
+    for (int i = 0; i < argc; i++) {
+        printf("arg: %s\n", argv[i]);
     }
-    printf("%f\n", soma);
-
+    
     return 0;
 }

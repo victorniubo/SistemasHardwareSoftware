@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/11-tipos-de-dados/">
+        <link rel="canonical" href="https://insper.github.io/SistemasHardwareSoftware/aulas/19-sincronizacao/">
       
       
         <meta name="author" content="Igor Montagner">
@@ -19,7 +19,7 @@
     
     
       
-        <title>11 - Tipos abstratos de dados - Sistemas Hardware-Software - 2020/2</title>
+        <title>19 - Sincronização - Sistemas Hardware-Software - 2020/2</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#11-tipos-abstratos-de-dados" class="md-skip">
+        <a href="#19-sincronizacao" class="md-skip">
           Skip to content
         </a>
       
@@ -158,7 +158,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              11 - Tipos abstratos de dados
+              19 - Sincronização
             
           </span>
         </div>
@@ -433,69 +433,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        11 - Tipos abstratos de dados
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" title="11 - Tipos abstratos de dados" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../11-tipos-de-dados/" title="11 - Tipos abstratos de dados" class="md-nav__link">
       11 - Tipos abstratos de dados
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#a-estrutura-point2d" class="md-nav__link">
-    A estrutura Point2D
-  </a>
-  
-    <nav class="md-nav" aria-label="A estrutura Point2D">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ponteiros-opacos" class="md-nav__link">
-    Ponteiros opacos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vetores-dinamicos" class="md-nav__link">
-    Vetores dinâmicos
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -587,11 +529,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../19-sincronizacao/" title="19 - Sincronização" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        19 - Sincronização
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="19 - Sincronização" class="md-nav__link md-nav__link--active">
       19 - Sincronização
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aquecimento" class="md-nav__link">
+    Aquecimento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sincronizacao-usando-mutex" class="md-nav__link">
+    Sincronização usando mutex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economizando-mutex" class="md-nav__link">
+    Economizando mutex
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -686,28 +680,22 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#a-estrutura-point2d" class="md-nav__link">
-    A estrutura Point2D
+  <a href="#aquecimento" class="md-nav__link">
+    Aquecimento
   </a>
-  
-    <nav class="md-nav" aria-label="A estrutura Point2D">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ponteiros-opacos" class="md-nav__link">
-    Ponteiros opacos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#vetores-dinamicos" class="md-nav__link">
-    Vetores dinâmicos
+  <a href="#sincronizacao-usando-mutex" class="md-nav__link">
+    Sincronização usando mutex
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#economizando-mutex" class="md-nav__link">
+    Economizando mutex
   </a>
   
 </li>
@@ -724,7 +712,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/11-tipos-de-dados/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/insper/sistemashardwaresoftware/edit/master/docs/aulas/19-sincronizacao/index.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -732,97 +720,158 @@
                   
                 
                 
-                <h1 id="11-tipos-abstratos-de-dados">11 - Tipos abstratos de dados<a class="headerlink" href="#11-tipos-abstratos-de-dados" title="Permanent link">&para;</a></h1>
-<h2 id="a-estrutura-point2d">A estrutura <code>Point2D</code><a class="headerlink" href="#a-estrutura-point2d" title="Permanent link">&para;</a></h2>
-<p>Vamos considerar primeiro uma estrutura usada para guardar um ponto 2D. Este tipo de estrutura seria útil ao trabalhar com algoritmos de Geometria Computacional ou mesmo em aplicações de física.</p>
-<div class="highlight"><pre><span></span><code><span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
-    <span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>
-<span class="p">}</span> <span class="n">Point2D</span><span class="p">;</span>
-</code></pre></div>
-
-<p>Vamos listar algumas operações que podem ser feitas com um ponto:</p>
-<ol>
-<li>Inicialização e finalização - todo ponto deve ser inicializado com algum valor para x e y.</li>
-<li>Somar dois pontos (e obter um terceiro);</li>
-<li>Calcular o coeficiente angular de uma reta que passe pelos dois pontos;</li>
-<li>Multiplicar ambas as coordenadas de um ponto (recebendo um novo em troca) - esta operação equivale a mudanças de escala</li>
-<li>Retornar os valores das componentes x e y do ponto;</li>
-</ol>
-<p>A ideia de um <em>Tipo Abstrato de Dados</em> é formalizar um "contrato" que lista quais operações podem ser feitas com este dado. Estas operações não dependem de nenhuma implementação em particular do tipo. Por exemplo, declarar o ponto com contendo um <code>double coords[2]</code> não muda os resultados de nenhuma das operações acima mas mudaria o código de acesso a coordenada <code>x</code> (<code>p.x</code> vs <code>p.coords[0]</code>). Veja um exemplo concreto de como fazer isto abaixo (arquivo <em>point2d.h</em>).</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef __POINT2D__</span>
-<span class="cp">#define __POINT2D__</span>
-
-<span class="k">struct</span> <span class="n">_p</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">_p</span> <span class="n">Point2D</span><span class="p">;</span>
-
-<span class="n">Point2D</span> <span class="o">*</span><span class="nf">point2D_new</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">);</span>
-<span class="kt">void</span> <span class="nf">point2D_destroy</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
-
-<span class="kt">double</span> <span class="nf">point2D_get_x</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
-<span class="kt">double</span> <span class="nf">point2D_get_y</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
-
-<span class="n">Point2D</span> <span class="o">*</span><span class="nf">point2D_add</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>
-<span class="kt">double</span> <span class="nf">point2D_theta</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span> <span class="n">Point2D</span> <span class="o">*</span><span class="n">p2</span><span class="p">);</span>
-<span class="n">Point2D</span> <span class="o">*</span><span class="nf">point2D_scale</span><span class="p">(</span><span class="n">Point2D</span> <span class="o">*</span><span class="n">p</span><span class="p">,</span> <span class="kt">double</span> <span class="n">s</span><span class="p">);</span>
-
-<span class="cp">#endif</span>
-</code></pre></div>
-
-<h3 id="ponteiros-opacos">Ponteiros opacos<a class="headerlink" href="#ponteiros-opacos" title="Permanent link">&para;</a></h3>
-<p>Note que no exemplo acima a definição do <code>struct</code> <code>Point2D</code> não está inclusa no arquivo <code>point2d.h</code>! Por conta de ponteiro se um tipo de dado em <em>C</em>, podemos declarar ponteiros para <code>Point2D</code> e passá-los para as funções de nosso <em>TAD</em> <em>mesmo sem saber a definição exata de onde eles apontam!</em>. Só não podemos tentar acessar <em>a variável apontada</em> por este ponteiros (usando <code>*</code> ou <code>-&gt;</code>). Por isso, <strong>alocação dinâmica de memória</strong> é essencial em <em>TAD*s: ela permite que todos os detalhes da implementação interna estejam **encapsulados*</em> e que só possamos interagir com o tipo via as funções definidas para isso.</p>
+                <h1 id="19-sincronizacao">19 - Sincronização<a class="headerlink" href="#19-sincronizacao" title="Permanent link">&para;</a></h1>
+<p>Na última aula aprendemos as APIs da biblioteca <code>pthread</code> para criar e esperar a finalização de threads. Também aprendemos a passar argumentos e receber de volta valores usando um <code>struct</code> alocado dinamicamente. </p>
+<h2 id="aquecimento">Aquecimento<a class="headerlink" href="#aquecimento" title="Permanent link">&para;</a></h2>
+<p>Vamos iniciar uma revisão trabalhando em cima do arquivo <code>soma_global.c</code>. </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Abra o arquivo <code>teste_point2d.c</code>. Você consegue entender seu conteúdo? Examine o código e entenda como <code>Point2D</code> deve ser usado.</p>
+<p>Abra o arquivo e analise seu conteúdo.</p>
 </div>
 <div class="admonition question short">
 <p class="admonition-title">Question</p>
-<p>Compile o arquivo <code>teste_point2d.c</code> usando a seguinte linha de comando. Rode-o logo em seguida. O que significa sua saída?</p>
-<blockquote>
-<p><code>$ gcc -Og -Wall -g teste_point2d.c point2d.c -o teste_ponto</code></p>
-</blockquote>
+<p>Qual o papel da função <code>soma_parcial</code>?  Explique o papel de cada atributo de </p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Como você setaria os atributos de <code>struct soma_partical_args</code> para obter a soma do vetor todo? E para obter somente a soma da primeira metade do vetor?</p>
+</div>
+<p>Para fins didáticos, estamos atualizando diretamente a variável <code>soma_total</code> dentro do <code>for</code>. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Complete as partes faltantes e rode o programa. Ele dá os resultados esperados? Teste para valores de <code>n</code> incrementalmente maiores.</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Os resultados acima estarão errados. Você consegue explicar por que?</p>
+</div>
+<h2 id="sincronizacao-usando-mutex">Sincronização usando <code>mutex</code><a class="headerlink" href="#sincronizacao-usando-mutex" title="Permanent link">&para;</a></h2>
+<p>Vamos agora trabalhar agora para corrigir este erro! Lembrando da aula, as operações possíveis são as seguintes:</p>
+<ul>
+<li><code>lock</code> - se tiver destravado, trava e continua; se não estiver espera.</li>
+<li><code>unlock</code> - se tiver a trava, a destrava e permite que outras tarefas travem.</li>
+</ul>
+<p>Note que não existe garantia de ordem! Ou seja, se tiverem vários processos esperando por um <code>mutex</code> qualquer um deles pode receber o acesso. Inclusive, uma thread pode esperar "para sempre" e nunca receber o acesso. Não é provável, mas é possível.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Você pode precisar instalar o pacote <code>manpages-posix-dev</code> para obter as páginas do manual usadas neste roteiro.</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Identifique no seu código quais linhas compõe a região crítica e onde deveriam estar as diretivas <code>lock</code> e <code>unlock</code>. Escreva abaixo suas concluões.</p>
+</div>
+<p>!<a class="magiclink magiclink-github magiclink-pull" href="https://github.com/squidfunk/mkdocs-material/pull/1" title="GitHub Pull Request: squidfunk/mkdocs-material!1">!1</a> example
+     Coloque um comentário nas linhas identificadas acima. </p>
+<p>Já sabemos onde iremos colocar as operações de <code>lock</code> e <code>unlock</code> do mutex. Agora falta só criá-lo. </p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>O mutex precisa ser criado e inicializado. Onde isto deve ser feito? Como ele pode ser recebido pela função da thread?</p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Consulte o manual de <code>pthread_mutex_init</code> e escreva abaixo como criar e inicializar um mutex. </p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Consulte o manual de <code>pthread_mutex_lock</code> e <code>pthread_mutex_unlock</code> e escreva abaixo como usá-las.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Abra o arquivo <code>point2d.c</code> e complete as partes faltantes. Verifique se tudo funciona corretamente usando <code>teste_point2d.c</code>. Você deve aproveitar ao máximo as funções já criadas (ou seja, pode usar <code>point2d_new</code> nas outras funções).</p>
+<p>Com base nas suas respostas acima, conserte seu programa <code>soma_global.c</code> e verifique que ele retorna os resultados corretos. </p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Agora meça o tempo de execução e anote abaixo. Compare com o original (que não funcionava) e explique a diferença.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Usar <code>mutex</code> é muito caro! Além de acabar com o paralelismo, as operações <code>lock</code> e <code>unlock</code> também são custosas.</p>
+</div>
+<h2 id="economizando-mutex">Economizando <code>mutex</code><a class="headerlink" href="#economizando-mutex" title="Permanent link">&para;</a></h2>
+<p>Nesta parte final iremos ver como diminuir o número de chamadas ao <code>mutex</code>.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>É necessário atualizar a variável global <code>soma</code> a cada iteração do <code>for</code>? E é possível atualizá-la somente uma vez?</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Agora que sua implementação do <em>TAD</em> <code>Point2D</code> está completa, compile o arquivo <code>teste_point2d.c</code> e execute-o usando o <em>Valgrind</em>. Seu programa deverá rodar sem erros.</p>
+<p>Implemente a ideia acima e veja se houve melhora. Salve como <code>soma-global2.c</code>.</p>
 </div>
-<h2 id="vetores-dinamicos">Vetores dinâmicos<a class="headerlink" href="#vetores-dinamicos" title="Permanent link">&para;</a></h2>
-<p>Agora que já vimos vetores dinâmicos em aula, vamos implementá-los. Nosso vetor tem a seguinte interface:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifndef __VECINT_H__</span>
-<span class="cp">#define __VECINT_H__</span>
+<p>O exercício acima deverá ter desempenho bom, já que limitamos a quantidade de vezes que usamos o <code>mutex</code>. Vamos tentar outra ideia agora.</p>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>Precisamos da variável global? E se cada thread retornasse sua soma parcial? Como o programa poderia ser organizado para que essa ideia funcione? </p>
+</div>
+<div class="admonition question short">
+<p class="admonition-title">Question</p>
+<p>A ideia acima precisou de <code>mutex</code>? Por que?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Implemente a ideia acima e confira os resultados. Houve melhora no desempenho?  </p>
+</div>
+<!--
+# Parte 2 - semáforos
 
-<span class="k">struct</span> <span class="n">_vec_int</span><span class="p">;</span>
+Usamos `mutex` quando precisamos criar regiões de **exclusão mútua** onde somente uma thread pode entrar por vez. Esta restrição é muito forte e não contempla outro caso muito comum em programação concorrente: sincronização de threads. Ou seja, o objetivo não é proteger o acesso a dados compartilhados, mas sim impor restrições no progresso das threads de maneira que elas estejam sempre em uma situação válida. Para isto trabalharemos com **semáforos**, que são um mecanismo de sincronização mais sofisticado e geral usado para que threads sincronizem seu progresso e possam executar **em paralelo**.
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">_vec_int</span> <span class="n">vec_int</span><span class="p">;</span>
+**Definição**: duas tarefas podem ser feitas em paralelo se
 
-<span class="n">vec_int</span> <span class="o">*</span><span class="nf">vec_int_create</span><span class="p">();</span>
-<span class="kt">void</span> <span class="nf">vec_int_destroy</span><span class="p">(</span><span class="n">vec_int</span> <span class="o">**</span><span class="n">v</span><span class="p">);</span>
+1. elas não compartilham absolutamente nenhuma informação.
+1. elas compartilham informação mas possuem **mecanismos de sincronização** de tal maneira que **toda ordem de execução possível** de suas instruções resulte no mesmo resultado final.
 
-<span class="kt">int</span> <span class="nf">vec_int_size</span><span class="p">(</span><span class="n">vec_int</span> <span class="o">*</span><span class="n">v</span><span class="p">);</span>
+**Semáforos** ajudam a criar programas no segundo caso. Nesta aula iremos olhar o caso mais simples de sincronização: duas threads combinam de só progredirem quando chegarem em um certo ponto do programa.
 
-<span class="cm">/* As seguinte operações devolvem</span>
-<span class="cm"> * 1 se pos é uma posição válida e a operação foi bem sucedida</span>
-<span class="cm"> * 0 caso contrário</span>
-<span class="cm"> *</span>
-<span class="cm"> * No caso de at, o valor é retornado na variável apontada por vi.</span>
-<span class="cm"> */</span>
-<span class="kt">int</span> <span class="nf">vec_int_at</span><span class="p">(</span><span class="n">vec_int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">vi</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">vec_int_insert</span><span class="p">(</span><span class="n">vec_int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
-<span class="kt">int</span> <span class="nf">vec_int_remove</span><span class="p">(</span><span class="n">vec_int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">pos</span><span class="p">);</span>
+## Rendez-vous
 
-<span class="cp">#endif</span>
+A expressão *Rendez-vous* significa, literalmente, *encontro* em francês. Ela é usada para marcar um horário para duas ou mais pessoas se encontrarem. No contexto de sincronização de tarefas, ele também é usado para nomear o problema de sincronização mais simples: duas threads rodando funções distintas precisam se sincronizar no meio de suas funções.
+
+![Tarefas sincronizadas usando um RDV](rdv.svg){width=400px}
+
+As partes A e B podem ser feitas em qualquer ordem, mas ambas obrigatoriamente devem ocorrer antes de iniciar a execução de C e D. Note que C e D também podem ser feitas em qualquer ordem.
+
+<div class="alert"> Quando dizemos que duas tarefas podem ser feitas em qualquer ordem não quer dizer que elas possam ser feitas em paralelo! Apenas estamos dizendo que A inteira pode ocorrer antes ou depois de B inteira e os resultados serão os mesmos.  </div>
+
+\newpage
+
+**Exercício**: Marque abaixo as ordens de execução possíveis para as partes A, B, C e D.
+
+1. A C B D
+1. A B C D
+1. B D A C
+1. B A D C
+1. B A C D
+
+Vamos fazer a solução do RDV no papel primeiro.
+
+**Inicialização**: Preencha aqui quantos semáforos serão usados, seus nomes e valores iniciais. \vspace{3em}
+
+**Sua solução**: Indique abaixo em quais quadrados azuis você usaria seus semáforos para resolver o RDV. Você pode usar mais de um semáforo em um mesmo quadrado e pode deixar os outros vazios.
+
+## Semáforos POSIX
+
+A página `sem_overview` do manual contém um resumo do uso de semáforos. A partir de seu conteúdo responda as questões abaixo.
+
+**Exercício**: Qual o tipo de variável usada para guardar um semáforo? Quais funções são usadas para criar e destruir cada tipo de semáforo? \vspace{5em}
+
+**Exercício**: Quais as funções usadas para incrementar e decrementar um semáforo? \vspace{5em}
+
+**Exercício**: Implemente (do zero) um programa que cria duas threads e as sincroniza usando *RDV*. Ambas deverão fazer um `print` antes e um depois do ponto de encontro.
+
+# Parte 3 - Entrega
+
+**Exercício**: adapte o exercício da soma do vetor para calcular também a variância. Percebam que agora temos duas partes que tem uma relação de dependência:
+
+1. Computar a soma (divida em duas partes)
+1. Computar a variância (que depende da soma)
+
+Use *RDV* para sincronizar as duas threads e você deverá implementar tudo na função
+
+<div class="highlight"><pre><span></span><code>void *computa_media_variancia(void *)
 </code></pre></div>
 
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><strong>Entrega</strong>: implemente a estrutura <em>vetor dinâmico</em> no arquivo <em>vec_int.c</em> e compile o programa de testes da mesma maneira que foi feito na parte anterior. Para sua entrega estar 100% seu programa de testes deverá rodar sem erros no <em>valgrind</em>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Os arquivos estão na pasta <code>09-tad</code> do repositório de entregas.</p>
-</div>
+Salve sua solução em um arquivo `var1.c` e entregue via blackboard.
+-->
                 
               
               
@@ -841,7 +890,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../10-malloc/" title="10 - Alocação Dinâmica de Memória" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../18-threads/" title="18 - Concorrência e Threads" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -850,19 +899,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                10 - Alocação Dinâmica de Memória
+                18 - Concorrência e Threads
               </div>
             </div>
           </a>
         
         
-          <a href="../12-linux-do-zero/" title="12 - Linux do Zero" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../99-corretor-automatico/" title="99 - Corretor Automático" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                12 - Linux do Zero
+                99 - Corretor Automático
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
