@@ -7,13 +7,18 @@ struct soma_parcial_args {
     int start, end;
 };
 
+pthread_mutex_t mut;
 double soma = 0;
 void *soma_parcial(void *_arg) {
     struct soma_parcial_args *spa = _arg;
-
+    double soma_parcial_var = 0;
     for (int i = spa->start; i < spa->end; i++) {
-        soma += spa->vetor[i];
+        soma_parcial_var += spa->vetor[i];
     }
+
+    pthread_mutex_lock(&mut);
+    soma += soma_parcial_var;
+    pthread_mutex_unlock(&mut);
 
     return NULL;
 }
@@ -28,14 +33,22 @@ int main(int argc, char *argv[]) {
         scanf("%lf", &vetor[i]);
     }
 
+    pthread_mutex_init(&mut, NULL);
 
-    /* TODO: criar thread_t e soma_parcial_args aqui */
-
+    pthread_t tids[4];
+    struct soma_parcial_args args[4];
     for (int i = 0; i < 4; i++) {
-        /* TODO: preencher args e lançar thread */
+        int part_size = n/4;
+        args[i] = (struct soma_parcial_args) {vetor, i * part_size, (i+1) * part_size };
+        if (i == 3) {
+            args[i].end = n;
+        }
+        pthread_create(&tids[i], NULL, soma_parcial, &args[i]);
     }
 
-    /* TODO: esperar pela conclusão*/
+    for (int i = 0; i < 4; i++) {
+        pthread_join(tids[i], NULL);
+    }
 
     printf("Paralela: %lf\n", soma);
 
